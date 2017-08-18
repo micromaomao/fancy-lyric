@@ -73,19 +73,23 @@ module.exports = function (assStr) {
 
   let stuff = []
 
-  while (i < lines.length && /^Dialogue: /.test(lines[i])) {
+  while (i < lines.length) {
     try {
-      let line = lines[i].replace(/^Dialogue: \d+,/, '').split(',')
-      let sTimeBegin = parseAssTime(line[0])
-      let sTimeEnd = parseAssTime(line[1])
-      let sStr = line.slice(8).join(',')
-      let content = parseKStr(sStr)
-      if (content.length > 0 && sTimeEnd - sTimeBegin > 0.01) {
-        stuff.push({
-          begin: sTimeBegin,
-          end: sTimeEnd,
-          content
-        })
+      if (/^Dialogue: /.test(lines[i])) {
+        let line = lines[i].replace(/^Dialogue: \d+,/, '').split(',')
+        let sTimeBegin = parseAssTime(line[0])
+        let sTimeEnd = parseAssTime(line[1])
+        let sStr = line.slice(8).join(',')
+        let content = parseKStr(sStr)
+        if (content.length > 0 && sTimeEnd - sTimeBegin > 0.01) {
+          stuff.push({
+            begin: sTimeBegin,
+            end: sTimeEnd,
+            content
+          })
+        }
+      } else if (/^\[/.test(lines[i])) {
+        break
       }
       i++
     } catch (e) {
