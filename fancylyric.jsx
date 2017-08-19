@@ -22,11 +22,18 @@ class FancyLyric extends React.Component {
       <div className={'fancylyric' + (this.state.matchLines.length > 0 ? ' lyricshown' : '')} ref={f => this.measureTarget = f}>
         <div className='youtube' id='youtube-player'></div>
         {this.state.matchLines.map(matchLine => {
+          let offset = this.state.videoTime - matchLine.begin + 0.2
+          let lastK = matchLine.content[matchLine.content.length - 1]
+          let yOffset = 0
+          if (lastK) {
+            yOffset = -75 * Math.max(0, Math.min(1, (offset - lastK.start) / (lastK.end - lastK.start)))
+          }
           return (
-            <div className='lyric' key={matchLine.i}>
+            <div className='lyric' key={matchLine.i} style={{
+              transform: `translate(0, ${yOffset}px)`
+            }}>
               {matchLine.content.map((k, ii) => {
-                let offset = this.state.videoTime - matchLine.begin + 0.2
-                let fadeInProgress = Math.min(Math.max(0, offset + fadeTime - ii * 0.05) / fadeTime, 1)
+                let fadeInProgress = Math.min(Math.max(0, offset + fadeTime + 0.5 - ii * 0.05) / fadeTime, 1)
                 let fadeOutProgress = Math.max(0,
                   Math.min(1, (matchLine.end + fadeTime / 2 - matchLine.content.length * 0.05 - this.state.videoTime + ii * 0.05) / fadeTime))
                 let fadeP = Math.min(fadeInProgress, fadeOutProgress)
@@ -36,7 +43,7 @@ class FancyLyric extends React.Component {
                 let dropEffectProg = 1 - Math.min(0.25, 1 - Math.abs(kProg - 0.5) * 2) * 4
                 return (
                   <span className={'k'} style={{
-                    transform: `translate(0, ${(1 - fadeP) * 20}px) scale(1, ${2 - fadeP})`,
+                    transform: `translate(0, ${(1 - fadeP) * 40 * Math.sign(fadeInProgress - fadeOutProgress)}px) scale(1, ${2 - fadeP})`,
                     opacity: Math.min(fadeP, 1 - dropEffectProg * 0.3)
                   }} key={ii}>
                     {k.text}
@@ -147,7 +154,7 @@ class FancyLyric extends React.Component {
       videoTime: time
     })
     if (!this.props.ass) return
-    let matchLines = this.props.ass.map((x, i) => Object.assign(x, {i})).filter(line => line.begin - fadeTime <= time && time < line.end + fadeTime)
+    let matchLines = this.props.ass.map((x, i) => Object.assign(x, {i})).filter(line => line.begin - fadeTime - 0.5 <= time && time < line.end + fadeTime)
     this.setState({
       matchLines
     })
