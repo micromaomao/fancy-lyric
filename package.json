@@ -35,5 +35,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
   }
 }

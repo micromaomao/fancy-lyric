@@ -2,14 +2,21 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 const FancyLyric = require('./fancylyric.jsx')
-const AssParse = require('./assparse.js')
 
 require('babel-polyfill')
 
 window.onYouTubeIframeAPIReady = function () {
+  let reactRoot = document.getElementsByClassName('react-root')[0]
+  let videoId = reactRoot.dataset.videoid
+  let ass = null
+  if (videoId) {
+    ass = JSON.parse(reactRoot.dataset.ass)
+  } else {
+    videoId = null
+  }
   let ui = ReactDOM.render(
-    <FancyLyric ass={AssParse(require('raw-loader!./test.ass'))} videoId='_mTRvJ9fugM' />,
-    document.getElementsByClassName('react-root')[0]
+    <FancyLyric ass={ass} videoId={videoId} />,
+    reactRoot
   )
 
   window.addEventListener('resize', evt => {
