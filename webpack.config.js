@@ -1,11 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const dev = process.env.NODE_ENV !== 'production'
 
 baseConfig = {
   module: {
     loaders: [
-      { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+      { test: /\.sass$/, loaders: ['css-loader', 'sass-loader'] },
       {
         test: /\.jsx$/,
         loader: 'babel-loader',
@@ -24,6 +25,10 @@ baseConfig = {
       {
         test: /\.png$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   },
@@ -37,8 +42,15 @@ module.exports = [
     },
     output: {
       path: path.join(__dirname, './dist'),
-      publicPath: '/dist/',
-      filename: '[name].js'
-    }
+      publicPath: '/resources/',
+      filename: '[name]-[hash].js'
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.pug',
+        minify: {removeComments: true, useShortDoctype: true, sortClassName: true, sortAttributes: true},
+        inject: false
+      })
+    ]
   })
 ]

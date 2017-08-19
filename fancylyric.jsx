@@ -81,6 +81,13 @@ class FancyLyric extends React.Component {
   }
   componentDidUpdate (prevProps, prevState) {
     this.ensurePlayerPlaced()
+    if (prevProps.videoId !== this.props.videoId) {
+      if (this.props.videoId) {
+        this.youtubePlayer.loadVideoById(this.props.videoId, 0, 'highres')
+      } else {
+        this.youtubePlayer.stopVideo()
+      }
+    }
     this.measureViewDim()
     if (this.youtubePlayer && this.state.contentWidth !== null && this.state.contentHeight !== null) {
       this.youtubePlayer.setSize(this.state.contentWidth, this.state.contentHeight)
@@ -88,8 +95,9 @@ class FancyLyric extends React.Component {
   }
   ensurePlayerPlaced () {
     if (this.youtubePlayer) return null
+    if (!this.props.videoId) return null
     this.youtubePlayer = new window.YT.Player('youtube-player', {
-      videoId: '_mTRvJ9fugM',
+      videoId: this.props.videoId,
       events: {
         onStateChange: this.handlePlayerStateChange,
         onReady: this.handlePlayerReady
