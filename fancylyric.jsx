@@ -25,7 +25,7 @@ class FancyLyric extends React.Component {
           return (
             <div className='lyric' key={matchLine.i}>
               {matchLine.content.map((k, ii) => {
-                let offset = this.state.videoTime - matchLine.begin
+                let offset = this.state.videoTime - matchLine.begin + 0.2
                 let fadeInProgress = Math.min(Math.max(0, offset + fadeTime - ii * 0.05) / fadeTime, 1)
                 let fadeOutProgress = Math.max(0,
                   Math.min(1, (matchLine.end + fadeTime / 2 - matchLine.content.length * 0.05 - this.state.videoTime + ii * 0.05) / fadeTime))
@@ -40,10 +40,16 @@ class FancyLyric extends React.Component {
                     opacity: Math.min(fadeP, 1 - dropEffectProg * 0.3)
                   }} key={ii}>
                     {k.text}
-                    <div className='underlinecontain'>
+                    <div className='dotcontain'>
                       {current ? <div className='fill' style={{
                         left: (kProg * 100) + '%',
                         top: (-4 * Math.pow(kProg - 0.5, 2) * dropHeight) + 'px'
+                      }} /> : null}
+                    </div>
+                    <div className='underlinecontain'>
+                      {current ? <div className='fill' style={{
+                        marginLeft: (kProg * 50) + '%',
+                        width: ((1 - kProg) * 100) + '%'
                       }} /> : null}
                     </div>
                   </span>

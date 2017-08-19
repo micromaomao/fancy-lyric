@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400i')
+
 body
   margin: 0
   padding: 0
@@ -36,18 +38,20 @@ body
     align-items: center
     color: white
     pointer-events: none
-    font-size: 40px
+    font-size: 45px
+    font-family: 'PT Serif', serif
     > span
       flex-shrink: 0
       flex-grow: 0
       white-space: pre
       will-change: transform, opacity, border-bottom
       position: relative
-      .underlinecontain
+      .dotcontain, .underlinecontain
         position: absolute
-        top: 0
         left: 0
         right: 0
+      .dotcontain
+        top: 0
         .fill
           position: absolute
           background-color: white
@@ -57,3 +61,11 @@ body
           top: 0
           left: 0
           will-change: left
+      .underlinecontain
+        bottom: 0
+        padding: 0
+        .fill
+          background-color: rgba(white, 0.5)
+          height: 2px
+          margin-left: 50%
+          width: 0
