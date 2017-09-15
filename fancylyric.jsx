@@ -28,9 +28,13 @@ class FancyLyric extends React.Component {
           if (lastK) {
             yOffset = -75 * Math.max(0, Math.min(1, (offset - lastK.start) / (lastK.end - lastK.start)))
           }
+          let evenOffset = 0
+          if (matchLine.i % 2 === 0) {
+            evenOffset = 30
+          }
           return (
             <div className='lyric' key={matchLine.i} style={{
-              transform: `translate(0, ${yOffset}px)`
+              transform: `translate(0, ${yOffset + evenOffset}px)`
             }}>
               {matchLine.content.map((k, ii) => {
                 let fadeInProgress = Math.min(Math.max(0, offset + fadeTime + 0.5 - ii * 0.05) / fadeTime, 1)
