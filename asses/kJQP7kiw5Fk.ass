@@ -17,9 +17,9 @@ Video File: ../../../Luis Fonsi - Despacito ft. Daddy Yankee.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.375000
-Scroll Position: 36
-Active Line: 45
-Video Position: 4032
+Scroll Position: 35
+Active Line: 40
+Video Position: 3709
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -67,7 +67,7 @@ Dialogue: 0,0:02:23.91,0:02:26.50,Default,,0,0,0,,{\k18}Yo {\k14}no {\k35}tengo 
 Dialogue: 0,0:02:26.58,0:02:29.04,Default,,0,0,0,,{\k69}Empecemos {\k51}lento, {\k43}después {\k83}salvaje
 Dialogue: 0,0:02:29.08,0:02:31.92,Default,,0,0,0,,{\k72}Pasitoa {\k73}pasito, {\k38}suave {\k101}suavecito
 Dialogue: 0,0:02:31.96,0:02:34.55,Default,,0,0,0,,{\k18}No {\k31}vamo {\k71}pegando, {\k67}poquitoa {\k72}poquito
-Dialogue: 0,0:02:34.67,0:02:37.30,Default,,0,0,0,,{\k35}Cuando {\k18}tú {\k16}me {\k65}besas {\k19}con {\k33}esa {\k77}destreza
+Dialogue: 0,0:02:34.67,0:02:37.30,Default,,0,0,0,,{\k35}Quando {\k18}tú {\k16}me {\k65}besas {\k19}con {\k33}esa {\k77}destreza
 Dialogue: 0,0:02:37.38,0:02:39.88,Default,,0,0,0,,{\k16}Veo {\k19}que {\k16}eres {\k66}malicia {\k28}con {\k105}delicadeza
 Dialogue: 0,0:02:39.88,0:02:42.60,Default,,0,0,0,,{\k70}Pasitoa {\k70}pasito, {\k48}suave {\k84}suavecito
 Dialogue: 0,0:02:42.72,0:02:45.35,Default,,0,0,0,,{\k23}No {\k32}vamo {\k66}pegando, {\k68}poquitoa {\k74}poquito
