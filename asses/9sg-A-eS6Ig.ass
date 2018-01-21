@@ -16,7 +16,9 @@ Video File: ../../../Enrique Iglesias - SUBEME LA RADIO (Official Video) ft. Des
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.500000
-Video Position: 319
+Scroll Position: 9
+Active Line: 21
+Video Position: 1875
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -31,21 +33,21 @@ Dialogue: 0,0:00:25.88,0:00:28.25,Default,,0,0,0,,{\k69}Siente {\k6}el {\k34}baj
 Dialogue: 0,0:00:28.42,0:00:30.84,Default,,0,0,0,,{\k52}Tráeme {\k4}el {\k58}alcohol {\k19}que {\k43}quita {\k10}el {\k56}dolor
 Dialogue: 0,0:00:30.84,0:00:33.63,Default,,0,0,0,,{\k26}Hoy {\k30}vamos {\k18}a {\k59}juntar {\k27}la {\k45}luna {\k22}y el {\k52}sol
 Dialogue: 0,0:00:33.68,0:00:36.39,Default,,0,0,0,,{\k74}Súbeme {\k13}la {\k53}radio {\k16}que {\k29}esta es {\k20}mi {\k66}canción
-Dialogue: 0,0:00:36.39,0:00:38.97,Default,,0,0,0,,{\k70}Siente {\k13}el {\k33}bajo {\k18}que {\k23}va {\k101}subiendo
+Dialogue: 0,0:00:36.39,0:00:38.97,Default,,0,0,0,,{\k81}Siente el {\k35}bajo {\k18}que {\k23}va {\k101}subiendo
 Dialogue: 0,0:00:38.97,0:00:41.35,Default,,0,0,0,,{\k51}Tráeme {\k7}el {\k58}alcohol {\k19}que {\k53}quita el {\k50}dolor
-Dialogue: 0,0:00:41.43,0:00:44.23,Default,,0,0,0,,{\k24}Hoy {\k32}vamos {\k17}a {\k65}juntar {\k18}la {\k48}luna {\k12}y {\k12}el {\k52}sol
+Dialogue: 0,0:00:41.43,0:00:44.23,Default,,0,0,0,,{\k24}Hoy {\k47}vamos a {\k53}juntar {\k31}la {\k49}luna {\k12}y {\k12}el {\k52}sol
 Dialogue: 0,0:00:44.23,0:00:45.73,Default,,0,0,0,,{\k23}Ya {\k19}no {\k14}me {\k34}importa {\k60}nada
-Dialogue: 0,0:00:46.94,0:00:48.31,Default,,0,0,0,,{\k11}Ni {\k7}el {\k32}día {\k19}ni {\k15}la {\k53}hora
-Dialogue: 0,0:00:49.19,0:00:51.07,Default,,0,0,0,,Si lo he perdido todo
-Dialogue: 0,0:00:51.07,0:00:53.90,Default,,0,0,0,,Me has dejado en las sombras
-Dialogue: 0,0:00:54.45,0:00:56.53,Default,,0,0,0,,Te juro que te pienso
-Dialogue: 0,0:00:56.91,0:00:59.24,Default,,0,0,0,,Hago el mejor intento
-Dialogue: 0,0:00:59.66,0:01:01.74,Default,,0,0,0,,El tiempo pasa lento
-Dialogue: 0,0:01:02.25,0:01:05.50,Default,,0,0,0,,Y yo me voy muriendo (y yo me voy muriendo)
-Dialogue: 0,0:01:05.25,0:01:08.00,Default,,0,0,0,,Si llega la noche y tú no contestas
-Dialogue: 0,0:01:08.00,0:01:10.63,Default,,0,0,0,,Te juro me quedo esperando a tu puerta
-Dialogue: 0,0:01:10.63,0:01:13.26,Default,,0,0,0,,Vivo pasando las noches en vela
-Dialogue: 0,0:01:13.26,0:01:15.93,Default,,0,0,0,,Y sigo cantando bajo la luna llena
+Dialogue: 0,0:00:46.94,0:00:48.31,Default,,0,0,0,,{\k18}Ni el {\k32}día {\k19}ni {\k15}la {\k53}hora
+Dialogue: 0,0:00:49.36,0:00:51.07,Default,,0,0,0,,{\k35}Si {\k17}lo {\k19}he{\k32} perdido {\k68}todo
+Dialogue: 0,0:00:51.36,0:00:53.90,Default,,0,0,0,,{\k15}Me {\k11}has {\k64}dejado en {\k39}las {\k125}sombras
+Dialogue: 0,0:00:54.49,0:00:56.53,Default,,0,0,0,,{\k12}Te {\k39}juro {\k22}que {\k28}te {\k103}pienso
+Dialogue: 0,0:00:57.03,0:00:59.24,Default,,0,0,0,,{\k46}Hago el {\k39}mejor {\k136}intento
+Dialogue: 0,0:00:59.78,0:01:01.74,Default,,0,0,0,,{\k16}El {\k36}tiempo {\k52}pasa {\k92}lento
+Dialogue: 0,0:01:02.37,0:01:05.50,Default,,0,0,0,,{\k15}Y {\k22}yo {\k16}me {\k27}voy {\k102}muriendo {\k131}(y yo me voy muriendo)
+Dialogue: 0,0:01:05.33,0:01:08.00,Default,,0,0,0,,{\k22}Si {\k35}llega {\k16}la {\k64}noche y {\k24}tú {\k24}no {\k82}contestas
+Dialogue: 0,0:01:08.00,0:01:10.63,Default,,0,0,0,,{\k23}Te {\k33}juro {\k21}me {\k30}quedo {\k76}esperando a {\k20}tu {\k60}puerta
+Dialogue: 0,0:01:10.84,0:01:13.26,Default,,0,0,0,,{\k33}Vivo {\k59}pasando {\k23}las {\k49}noches {\k17}en {\k61}vela
+Dialogue: 0,0:01:13.38,0:01:15.93,Default,,0,0,0,,{\k8}Y {\k34}sigo {\k67}cantando {\k33}bajo {\k19}la {\k28}luna {\k66}llena
 Dialogue: 0,0:01:15.93,0:01:18.59,Default,,0,0,0,,Súbeme la radio que esta es mi canción
 Dialogue: 0,0:01:18.59,0:01:21.01,Default,,0,0,0,,Siente el bajo que va subiendo
 Dialogue: 0,0:01:21.01,0:01:23.60,Default,,0,0,0,,Tráeme el alcohol que quita el dolor
