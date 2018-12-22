@@ -5,30 +5,38 @@ const dev = process.env.NODE_ENV !== 'production'
 
 baseConfig = {
   module: {
-    loaders: [
-      { test: /\.sass$/, loaders: ['css-loader', 'sass-loader'] },
+    rules: [
+      { test: /\.sass$/, use: ['css-loader', 'sass-loader'] },
       {
         test: /\.jsx$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015'],
-          plugins: ['transform-react-jsx']
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-transform-react-jsx']
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015'],
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        ]
       },
       {
         test: /\.png$/,
-        loader: 'file-loader'
+        use: 'file-loader'
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        use: 'pug-loader'
       }
     ]
   },
