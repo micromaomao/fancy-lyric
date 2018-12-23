@@ -3,7 +3,7 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const FancyLyric = require('./fancylyric.jsx')
 
-require('babel-polyfill')
+require('@babel/polyfill')
 
 window.onYouTubeIframeAPIReady = function () {
   let reactRoot = document.getElementsByClassName('react-root')[0]
